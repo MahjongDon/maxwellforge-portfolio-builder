@@ -11,6 +11,9 @@ interface PortfolioItem {
   buildTime: string;
   image: string;
   result: string;
+  demoUrl?: string;
+  githubUrl?: string;
+  size?: "normal" | "wide" | "tall" | "large";
 }
 
 const portfolioItems: PortfolioItem[] = [
@@ -22,7 +25,10 @@ const portfolioItems: PortfolioItem[] = [
     technologies: ["React", "TailwindCSS", "Stripe"],
     buildTime: "48 hours",
     image: "https://images.unsplash.com/photo-1523887329668-f151e3bf4e3f?q=80&w=2070&auto=format&fit=crop",
-    result: "42% increase in conversion rate within first month."
+    result: "42% increase in conversion rate within first month.",
+    demoUrl: "https://example.com/demo1",
+    githubUrl: "https://github.com/maxwellforge/project1",
+    size: "wide"
   },
   {
     id: 2,
@@ -32,7 +38,9 @@ const portfolioItems: PortfolioItem[] = [
     technologies: ["React", "Chart.js", "Firebase"],
     buildTime: "36 hours",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    result: "Streamlined user workflow, reducing task completion time by 28%."
+    result: "Streamlined user workflow, reducing task completion time by 28%.",
+    demoUrl: "https://example.com/demo2",
+    size: "tall"
   },
   {
     id: 3,
@@ -42,7 +50,34 @@ const portfolioItems: PortfolioItem[] = [
     technologies: ["JavaScript", "TailwindCSS", "Node.js"],
     buildTime: "24 hours",
     image: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=2070&auto=format&fit=crop",
-    result: "Online reservations increased by 65% in first week."
+    result: "Online reservations increased by 65% in first week.",
+    demoUrl: "https://example.com/demo3",
+    githubUrl: "https://github.com/maxwellforge/project3",
+    size: "normal"
+  },
+  {
+    id: 4,
+    title: "Fitness App UI",
+    category: "Mobile Design",
+    description: "Clean, intuitive fitness tracking app with progress visualization.",
+    technologies: ["Figma", "React Native", "Firebase"],
+    buildTime: "72 hours",
+    image: "https://images.unsplash.com/photo-1532347922424-c84d79ba026c?q=80&w=2070&auto=format&fit=crop",
+    result: "User retention increased by 40% after redesign.",
+    demoUrl: "https://example.com/demo4",
+    size: "large"
+  },
+  {
+    id: 5,
+    title: "Portfolio Site",
+    category: "Web Development",
+    description: "Minimalist portfolio site for a graphic designer with project showcase.",
+    technologies: ["React", "TailwindCSS", "Framer Motion"],
+    buildTime: "24 hours",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2070&auto=format&fit=crop",
+    result: "95% positive client feedback on first presentation.",
+    githubUrl: "https://github.com/maxwellforge/project5",
+    size: "normal"
   }
 ];
 
@@ -94,6 +129,20 @@ const PortfolioSection = () => {
     document.body.style.overflow = "auto";
   };
 
+  // Helper function to determine grid classes based on item size
+  const getGridClasses = (size?: string) => {
+    switch (size) {
+      case "wide":
+        return "md:col-span-2";
+      case "tall":
+        return "md:row-span-2";
+      case "large":
+        return "md:col-span-2 md:row-span-2";
+      default:
+        return "";
+    }
+  };
+
   return (
     <section id="portfolio" ref={sectionRef} className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -102,14 +151,18 @@ const PortfolioSection = () => {
           Recent projects delivered with precision and efficiency.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-[250px]">
           {portfolioItems.map((item, index) => (
             <div
               key={item.id}
               ref={(el) => (itemsRef.current[index] = el)}
-              className="portfolio-card reveal group aspect-[4/3]"
+              className={cn(
+                "portfolio-card reveal group",
+                getGridClasses(item.size),
+                "transform transition-all duration-500 hover:translate-y-[-5px] hover:shadow-lg"
+              )}
               data-delay={index + 1}
-              onClick={() => openModal(item)}
             >
               <div 
                 className="w-full h-full bg-cover bg-center"
@@ -118,10 +171,32 @@ const PortfolioSection = () => {
               <div className="portfolio-card-overlay group-hover:opacity-100">
                 <div className="portfolio-card-content group-hover:translate-y-0">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-white/80 mb-4">{item.category}</p>
-                  <span className="inline-block px-4 py-1 border border-white/30 text-sm">
-                    View Project
-                  </span>
+                  <p className="text-white/80 mb-3">{item.category}</p>
+                  <p className="text-white/70 mb-4 text-sm line-clamp-2">{item.description}</p>
+                  
+                  <div className="flex gap-2 justify-center">
+                    {item.demoUrl && (
+                      <a 
+                        href={item.demoUrl} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="px-3 py-1.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm rounded-sm transition-colors"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openModal(item);
+                      }}
+                      className="px-3 py-1.5 bg-white text-black text-sm rounded-sm hover:bg-white/90 transition-colors"
+                    >
+                      View Details
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,7 +206,10 @@ const PortfolioSection = () => {
 
       {/* Project Details Modal */}
       {isModalOpen && selectedItem && (
-        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+        <div 
+          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
           <div 
             className="bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-fade-in"
             onClick={(e) => e.stopPropagation()}
@@ -193,6 +271,30 @@ const PortfolioSection = () => {
                   <h4 className="text-sm uppercase tracking-wider text-primary/60 mb-2">Result</h4>
                   <p className="text-lg font-medium">{selectedItem.result}</p>
                 </div>
+              </div>
+              
+              <div className="flex gap-4 mt-6">
+                {selectedItem.demoUrl && (
+                  <a 
+                    href={selectedItem.demoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6 py-2 bg-secondary hover:bg-secondary/80 text-primary font-medium transition-colors"
+                  >
+                    View Live Demo
+                  </a>
+                )}
+                
+                {selectedItem.githubUrl && (
+                  <a 
+                    href={selectedItem.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6 py-2 border border-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    GitHub Repository
+                  </a>
+                )}
               </div>
             </div>
           </div>
