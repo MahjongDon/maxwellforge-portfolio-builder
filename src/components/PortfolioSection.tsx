@@ -13,71 +13,80 @@ interface PortfolioItem {
   result: string;
   demoUrl?: string;
   githubUrl?: string;
-  size?: "normal" | "wide" | "tall" | "large";
 }
 
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "E-Commerce Redesign",
+    title: "Landing Page",
     category: "Web Development",
-    description: "Complete store redesign with optimized product pages and checkout flow.",
-    technologies: ["React", "TailwindCSS", "Stripe"],
-    buildTime: "48 hours",
-    image: "https://images.unsplash.com/photo-1523887329668-f151e3bf4e3f?q=80&w=2070&auto=format&fit=crop",
-    result: "42% increase in conversion rate within first month.",
-    demoUrl: "https://example.com/demo1",
-    githubUrl: "https://github.com/maxwellforge/project1",
-    size: "wide"
+    description: "High-converting landing page with optimized CTAs and responsive design.",
+    technologies: ["React", "TailwindCSS", "Framer Motion"],
+    buildTime: "24 hours",
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop",
+    result: "35% increase in lead generation within first week.",
+    demoUrl: "https://example.com/landing-page",
+    githubUrl: "https://github.com/maxwellforge/landing-page"
   },
   {
     id: 2,
-    title: "SaaS Dashboard",
-    category: "UI/UX Design",
-    description: "Modern analytics dashboard for a SaaS platform with real-time data visualization.",
-    technologies: ["React", "Chart.js", "Firebase"],
+    title: "Blog Site",
+    category: "Content Platform",
+    description: "Minimalist blog platform with advanced content management and SEO optimization.",
+    technologies: ["NextJS", "SCSS", "Sanity CMS"],
     buildTime: "36 hours",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    result: "Streamlined user workflow, reducing task completion time by 28%.",
-    demoUrl: "https://example.com/demo2",
-    size: "tall"
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
+    result: "Improved page load speed by 45% and doubled organic traffic.",
+    demoUrl: "https://example.com/blog-site",
+    githubUrl: "https://github.com/maxwellforge/blog-site"
   },
   {
     id: 3,
-    title: "Restaurant Website",
-    category: "Web Development",
-    description: "Elegant website with online reservation system and menu management.",
-    technologies: ["JavaScript", "TailwindCSS", "Node.js"],
-    buildTime: "24 hours",
-    image: "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=2070&auto=format&fit=crop",
-    result: "Online reservations increased by 65% in first week.",
-    demoUrl: "https://example.com/demo3",
-    githubUrl: "https://github.com/maxwellforge/project3",
-    size: "normal"
+    title: "CRM App",
+    category: "Business Application",
+    description: "Custom CRM solution with client management, pipeline tracking, and analytics dashboard.",
+    technologies: ["React", "Firebase", "ChartJS"],
+    buildTime: "48 hours",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    result: "Streamlined sales process, reducing closing time by 22%.",
+    demoUrl: "https://example.com/crm-app",
+    githubUrl: "https://github.com/maxwellforge/crm-app"
   },
   {
     id: 4,
-    title: "Fitness App UI",
-    category: "Mobile Design",
-    description: "Clean, intuitive fitness tracking app with progress visualization.",
-    technologies: ["Figma", "React Native", "Firebase"],
-    buildTime: "72 hours",
-    image: "https://images.unsplash.com/photo-1532347922424-c84d79ba026c?q=80&w=2070&auto=format&fit=crop",
-    result: "User retention increased by 40% after redesign.",
-    demoUrl: "https://example.com/demo4",
-    size: "large"
+    title: "Note-Taking App",
+    category: "Productivity Tool",
+    description: "Elegant note-taking application with markdown support and cloud syncing.",
+    technologies: ["Vue.js", "TailwindCSS", "Supabase"],
+    buildTime: "30 hours",
+    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2074&auto=format&fit=crop",
+    result: "Positive user feedback with 90% satisfaction rating from beta testers.",
+    demoUrl: "https://example.com/note-app",
+    githubUrl: "https://github.com/maxwellforge/note-app"
   },
   {
     id: 5,
-    title: "Portfolio Site",
-    category: "Web Development",
-    description: "Minimalist portfolio site for a graphic designer with project showcase.",
-    technologies: ["React", "TailwindCSS", "Framer Motion"],
-    buildTime: "24 hours",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2070&auto=format&fit=crop",
-    result: "95% positive client feedback on first presentation.",
-    githubUrl: "https://github.com/maxwellforge/project5",
-    size: "normal"
+    title: "Password Generator",
+    category: "Security Tool",
+    description: "Secure password generator with customizable parameters and strength assessment.",
+    technologies: ["JavaScript", "CSS", "HTML"],
+    buildTime: "12 hours",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop",
+    result: "Featured in a security newsletter with over 10,000 downloads in the first month.",
+    demoUrl: "https://example.com/password-generator",
+    githubUrl: "https://github.com/maxwellforge/password-generator"
+  },
+  {
+    id: 6,
+    title: "Calendar Task Management",
+    category: "Productivity Tool",
+    description: "Comprehensive calendar and task management web application with reminders and priority sorting.",
+    technologies: ["React", "Redux", "MUI", "Firebase"],
+    buildTime: "40 hours",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop",
+    result: "Used by three startups as their primary task management solution.",
+    demoUrl: "https://example.com/calendar-app",
+    githubUrl: "https://github.com/maxwellforge/calendar-app"
   }
 ];
 
@@ -129,20 +138,6 @@ const PortfolioSection = () => {
     document.body.style.overflow = "auto";
   };
 
-  // Helper function to determine grid classes based on item size
-  const getGridClasses = (size?: string) => {
-    switch (size) {
-      case "wide":
-        return "md:col-span-2";
-      case "tall":
-        return "md:row-span-2";
-      case "large":
-        return "md:col-span-2 md:row-span-2";
-      default:
-        return "";
-    }
-  };
-
   return (
     <section id="portfolio" ref={sectionRef} className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -151,21 +146,17 @@ const PortfolioSection = () => {
           Recent projects delivered with precision and efficiency.
         </p>
 
-        {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-[250px]">
+        {/* 3-column by 2-row Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {portfolioItems.map((item, index) => (
             <div
               key={item.id}
               ref={(el) => (itemsRef.current[index] = el)}
-              className={cn(
-                "portfolio-card reveal group",
-                getGridClasses(item.size),
-                "transform transition-all duration-500 hover:translate-y-[-5px] hover:shadow-lg"
-              )}
+              className="portfolio-card reveal group transform transition-all duration-500 hover:translate-y-[-5px] hover:shadow-lg"
               data-delay={index + 1}
             >
               <div 
-                className="w-full h-full bg-cover bg-center"
+                className="w-full h-64 bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.image})` }}
               />
               <div className="portfolio-card-overlay group-hover:opacity-100">
