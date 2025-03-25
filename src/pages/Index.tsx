@@ -1,12 +1,58 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import SkillsSection from "@/components/SkillsSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  // Initialize animation and scrolling logic
+  useEffect(() => {
+    // Function to handle lazy loading of images
+    const blurImages = document.querySelectorAll(".blur-load");
+    blurImages.forEach((div) => {
+      const img = div.querySelector("img");
+      
+      function loaded() {
+        div.classList.add("loaded");
+      }
+      
+      if (img?.complete) {
+        loaded();
+      } else {
+        img?.addEventListener("load", loaded);
+      }
+    });
+
+    // Function to handle reveal animations on scroll
+    const handleScrollAnimations = () => {
+      // Your animation logic here if needed
+    };
+
+    window.addEventListener("scroll", handleScrollAnimations);
+    handleScrollAnimations(); // Initial check
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollAnimations);
+      blurImages.forEach((div) => {
+        const img = div.querySelector("img");
+        img?.removeEventListener("load", () => div.classList.add("loaded"));
+      });
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <PortfolioSection />
+        <SkillsSection />
+        <ContactSection />
+      </main>
+      <Footer />
     </div>
   );
 };
