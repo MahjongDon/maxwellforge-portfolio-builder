@@ -107,7 +107,7 @@ const PortfolioSection = () => {
             <div
               key={item.id}
               ref={(el) => (itemsRef.current[index] = el)}
-              className="portfolio-card reveal aspect-[4/3]"
+              className="portfolio-card reveal group aspect-[4/3]"
               data-delay={index + 1}
               onClick={() => openModal(item)}
             >
@@ -115,8 +115,8 @@ const PortfolioSection = () => {
                 className="w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.image})` }}
               />
-              <div className="portfolio-card-overlay">
-                <div className="portfolio-card-content">
+              <div className="portfolio-card-overlay group-hover:opacity-100">
+                <div className="portfolio-card-content group-hover:translate-y-0">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <p className="text-white/80 mb-4">{item.category}</p>
                   <span className="inline-block px-4 py-1 border border-white/30 text-sm">

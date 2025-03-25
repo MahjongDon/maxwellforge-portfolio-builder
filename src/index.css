@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -118,17 +117,16 @@
   }
   
   .portfolio-card {
-    @apply relative overflow-hidden cursor-pointer group transition-all duration-500 
+    @apply relative overflow-hidden cursor-pointer transition-all duration-500 
     bg-background border border-border hover:border-primary;
   }
   
   .portfolio-card-overlay {
-    @apply absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 
-    flex items-center justify-center transition-opacity duration-300;
+    @apply absolute inset-0 bg-black/80 opacity-0 flex items-center justify-center transition-opacity duration-300;
   }
   
   .portfolio-card-content {
-    @apply text-white text-center px-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300;
+    @apply text-white text-center px-6 transform translate-y-4 transition-transform duration-300;
   }
   
   .scale-in-hover {
