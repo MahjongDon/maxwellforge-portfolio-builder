@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +9,7 @@ interface PortfolioItem {
   technologies: string[];
   buildTime: string;
   image: string;
+  altText: string;
   result: string;
   demoUrl?: string;
   githubUrl?: string;
@@ -19,74 +19,74 @@ const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: "Landing Page",
-    category: "Web Development",
+    category: "Joe's Coffee",
     description: "High-converting landing page with optimized CTAs and responsive design.",
     technologies: ["React", "TailwindCSS", "Framer Motion"],
     buildTime: "24 hours",
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop",
+    altText: "Joe's Coffee Shop landing page screenshot showing a mobile-ready design for small businesses.",
     result: "35% increase in lead generation within first week.",
-    demoUrl: "https://example.com/landing-page",
-    githubUrl: "https://github.com/maxwellforge/landing-page"
+    demoUrl: "http://forgecafe.maxwellforge.dev"
   },
   {
     id: 2,
-    title: "Blog Site",
-    category: "Content Platform",
-    description: "Minimalist blog platform with advanced content management and SEO optimization.",
-    technologies: ["NextJS", "SCSS", "Sanity CMS"],
-    buildTime: "36 hours",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
-    result: "Improved page load speed by 45% and doubled organic traffic.",
-    demoUrl: "https://example.com/blog-site",
-    githubUrl: "https://github.com/maxwellforge/blog-site"
-  },
-  {
-    id: 3,
     title: "CRM App",
-    category: "Business Application",
+    category: "ForgeCRM",
     description: "Custom CRM solution with client management, pipeline tracking, and analytics dashboard.",
     technologies: ["React", "Firebase", "ChartJS"],
     buildTime: "48 hours",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    altText: "CRM App screenshot displaying contact and task management for small businesses.",
     result: "Streamlined sales process, reducing closing time by 22%.",
-    demoUrl: "https://example.com/crm-app",
-    githubUrl: "https://github.com/maxwellforge/crm-app"
+    demoUrl: "http://forgecrm.maxwellforge.dev/"
+  },
+  {
+    id: 3,
+    title: "Budget Tracker",
+    category: "FinForge",
+    description: "Personal finance application for tracking expenses and managing budgets with visualization tools.",
+    technologies: ["Vue.js", "Chart.js", "Firebase"],
+    buildTime: "36 hours",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2036&auto=format&fit=crop",
+    altText: "FinForge budget tracker screenshot with expense tracking and currency conversion features.",
+    result: "Helped users reduce unnecessary spending by an average of 15%.",
+    demoUrl: "http://finforge.maxwellforge.dev/"
   },
   {
     id: 4,
     title: "Note-Taking App",
-    category: "Productivity Tool",
+    category: "ForgeNotes",
     description: "Elegant note-taking application with markdown support and cloud syncing.",
     technologies: ["Vue.js", "TailwindCSS", "Supabase"],
     buildTime: "30 hours",
     image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=2074&auto=format&fit=crop",
+    altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
-    demoUrl: "https://example.com/note-app",
-    githubUrl: "https://github.com/maxwellforge/note-app"
+    demoUrl: "http://forgenotes.maxwellforge.dev/"
   },
   {
     id: 5,
+    title: "Blog Site",
+    category: "WanderFree",
+    description: "Minimalist blog platform with advanced content management and SEO optimization.",
+    technologies: ["NextJS", "SCSS", "Sanity CMS"],
+    buildTime: "36 hours",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
+    altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
+    result: "Improved page load speed by 45% and doubled organic traffic.",
+    demoUrl: "http://forgeblog.maxwellforge.dev/"
+  },
+  {
+    id: 6,
     title: "Password Generator",
-    category: "Security Tool",
+    category: "ForgeGuard",
     description: "Secure password generator with customizable parameters and strength assessment.",
     technologies: ["JavaScript", "CSS", "HTML"],
     buildTime: "12 hours",
     image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop",
+    altText: "ForgePass screenshot of a secure password generator with customizable options.",
     result: "Featured in a security newsletter with over 10,000 downloads in the first month.",
-    demoUrl: "https://example.com/password-generator",
-    githubUrl: "https://github.com/maxwellforge/password-generator"
-  },
-  {
-    id: 6,
-    title: "Calendar Task Management",
-    category: "Productivity Tool",
-    description: "Comprehensive calendar and task management web application with reminders and priority sorting.",
-    technologies: ["React", "Redux", "MUI", "Firebase"],
-    buildTime: "40 hours",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop",
-    result: "Used by three startups as their primary task management solution.",
-    demoUrl: "https://example.com/calendar-app",
-    githubUrl: "https://github.com/maxwellforge/calendar-app"
+    demoUrl: "http://forgeguard.maxwellforge.dev/"
   }
 ];
 
@@ -152,12 +152,14 @@ const PortfolioSection = () => {
             <div
               key={item.id}
               ref={(el) => (itemsRef.current[index] = el)}
-              className="portfolio-card reveal group transform transition-all duration-500 hover:translate-y-[-5px] hover:shadow-lg"
+              className="portfolio-card group transform transition-all duration-500 hover:translate-y-[-5px] hover:shadow-lg"
               data-delay={index + 1}
             >
               <div 
                 className="w-full h-64 bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.image})` }}
+                aria-label={item.altText}
+                role="img"
               />
               <div className="portfolio-card-overlay group-hover:opacity-100">
                 <div className="portfolio-card-content group-hover:translate-y-0">
@@ -209,6 +211,7 @@ const PortfolioSection = () => {
               <button 
                 onClick={closeModal}
                 className="absolute top-4 right-4 text-black/70 hover:text-black z-10"
+                aria-label="Close modal"
               >
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -229,6 +232,8 @@ const PortfolioSection = () => {
               <div 
                 className="w-full aspect-video bg-cover bg-center"
                 style={{ backgroundImage: `url(${selectedItem.image})` }}
+                aria-label={selectedItem.altText}
+                role="img"
               />
             </div>
             
