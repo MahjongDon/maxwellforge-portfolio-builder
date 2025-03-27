@@ -26,7 +26,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "WanderFree Blog",
-    image: "public/lovable-uploads/a7664875-1374-4362-af45-c40a9bca1f3c.png",
+    image: "public/lovable-uploads/ff1ec87f-5bf9-4ab3-a079-f8dd94571877.png",
     altText: "WanderFree travel blog with palm trees background"
   },
   {
@@ -44,13 +44,13 @@ const projects: Project[] = [
   {
     id: 6,
     title: "ForgeNotes",
-    image: "public/lovable-uploads/453046f1-76a1-4e14-8075-d8a369ea46d0.png",
+    image: "public/lovable-uploads/7b85148d-6f85-40c6-bb65-29ea5ce34a91.png",
     altText: "ForgeNotes note-taking app with interface"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "public/lovable-uploads/e0c9c369-392b-44be-9ccd-b25305648a2b.png",
+    image: "public/lovable-uploads/453046f1-76a1-4e14-8075-d8a369ea46d0.png",
     altText: "ForgePass screenshot of a secure password generator with customizable options"
   }
 ];
@@ -82,9 +82,8 @@ const PortfolioSlideshow = () => {
         opts={{
           loop: true,
         }}
-        defaultIndex={currentSlide}
-        onSelect={(api) => {
-          if (api) setCurrentSlide(api.selectedScrollSnap());
+        setApi={(api) => {
+          if (api) api.scrollTo(currentSlide);
         }}
       >
         <CarouselContent className="h-full">

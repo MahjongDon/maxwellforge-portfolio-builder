@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
@@ -47,7 +48,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Minimalist blog platform with advanced content management and SEO optimization.",
     technologies: ["NextJS", "SCSS", "Sanity CMS"],
     buildTime: "36 hours",
-    image: "public/lovable-uploads/a7664875-1374-4362-af45-c40a9bca1f3c.png",
+    image: "public/lovable-uploads/ff1ec87f-5bf9-4ab3-a079-f8dd94571877.png",
     altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
     result: "Improved page load speed by 45% and doubled organic traffic.",
     demoUrl: "http://forgewander.maxwellforge.dev"
@@ -83,7 +84,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Elegant note-taking application with markdown support and cloud syncing.",
     technologies: ["Vue.js", "TailwindCSS", "Supabase"],
     buildTime: "30 hours",
-    image: "public/lovable-uploads/453046f1-76a1-4e14-8075-d8a369ea46d0.png",
+    image: "public/lovable-uploads/7b85148d-6f85-40c6-bb65-29ea5ce34a91.png",
     altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
     demoUrl: "http://forgenotes.maxwellforge.dev/"
@@ -95,7 +96,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Secure password generator with customizable parameters and strength assessment.",
     technologies: ["JavaScript", "CSS", "HTML"],
     buildTime: "12 hours",
-    image: "public/lovable-uploads/e0c9c369-392b-44be-9ccd-b25305648a2b.png",
+    image: "public/lovable-uploads/453046f1-76a1-4e14-8075-d8a369ea46d0.png",
     altText: "ForgePass screenshot of a secure password generator with customizable options.",
     result: "Featured in a security newsletter with over 10,000 downloads in the first month.",
     demoUrl: "http://forgeguard.maxwellforge.dev/"
