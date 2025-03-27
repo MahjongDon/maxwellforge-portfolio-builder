@@ -36,7 +36,7 @@ const HeroSection = () => {
         </div>
         <div ref={videoRef} className="reveal w-full md:w-1/2 aspect-[4/3] md:aspect-square relative">
           <video
-            src="/portfolio-video.mp4"
+            src="/Slideshow.mp4"
             autoPlay
             loop
             muted
