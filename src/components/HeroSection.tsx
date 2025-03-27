@@ -49,7 +49,7 @@ const HeroSection = () => {
         
         <div 
           ref={imageRef} 
-          className="reveal w-full md:w-1/2 aspect-[4/3] md:aspect-square"
+          className="reveal w-full md:w-1/2 aspect-[4/3] md:aspect-square relative"
         >
           <PortfolioSlideshow />
         </div>

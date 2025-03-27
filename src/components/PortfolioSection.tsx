@@ -24,7 +24,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "High-converting landing page with optimized CTAs and responsive design.",
     technologies: ["React", "TailwindCSS", "Framer Motion"],
     buildTime: "24 hours",
-    image: "public/lovable-uploads/e0c9c369-392b-44be-9ccd-b25305648a2b.png",
+    image: "public/lovable-uploads/044e5c53-3b47-4566-b468-a6e3d8dc9519.png",
     altText: "Joe's Coffee Shop landing page screenshot showing a mobile-ready design for small businesses.",
     result: "35% increase in lead generation within first week.",
     demoUrl: "http://forgecoffee.maxwellforge.dev"
@@ -36,7 +36,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Event landing page with countdown timer, registration form, and speaker profiles.",
     technologies: ["React", "TailwindCSS", "Netlify"],
     buildTime: "30 hours",
-    image: "public/lovable-uploads/e8d85fdb-6656-42fd-b6fa-3ac3fff9acfd.png",
+    image: "public/lovable-uploads/d6548349-1199-41bf-97f0-ed6fa1ed8405.png",
     altText: "RevUp Sales Summit landing page with registration countdown and event details.",
     result: "Sold out event within 48 hours of page launch.",
     demoUrl: "https://app.netlify.com/sites/forgesales/overview"
@@ -48,7 +48,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Minimalist blog platform with advanced content management and SEO optimization.",
     technologies: ["NextJS", "SCSS", "Sanity CMS"],
     buildTime: "36 hours",
-    image: "public/lovable-uploads/ff1ec87f-5bf9-4ab3-a079-f8dd94571877.png",
+    image: "public/lovable-uploads/0482a93c-43ed-4b8c-9707-044ad5eb69e3.png",
     altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
     result: "Improved page load speed by 45% and doubled organic traffic.",
     demoUrl: "http://forgewander.maxwellforge.dev"
@@ -84,7 +84,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Elegant note-taking application with markdown support and cloud syncing.",
     technologies: ["Vue.js", "TailwindCSS", "Supabase"],
     buildTime: "30 hours",
-    image: "public/lovable-uploads/7b85148d-6f85-40c6-bb65-29ea5ce34a91.png",
+    image: "public/lovable-uploads/5aba59fb-18d8-4dc1-81c5-64ddff5b3084.png",
     altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
     demoUrl: "http://forgenotes.maxwellforge.dev/"
@@ -96,7 +96,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Secure password generator with customizable parameters and strength assessment.",
     technologies: ["JavaScript", "CSS", "HTML"],
     buildTime: "12 hours",
-    image: "public/lovable-uploads/453046f1-76a1-4e14-8075-d8a369ea46d0.png",
+    image: "public/lovable-uploads/c158ea81-3093-4da2-807f-769687d3d9a8.png",
     altText: "ForgePass screenshot of a secure password generator with customizable options.",
     result: "Featured in a security newsletter with over 10,000 downloads in the first month.",
     demoUrl: "http://forgeguard.maxwellforge.dev/"
