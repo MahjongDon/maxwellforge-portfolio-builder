@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -145,6 +146,20 @@
   
   .blur-load.loaded img {
     opacity: 1;
+  }
+  
+  /* Slideshow specific styles */
+  .slideshow-container .slide {
+    @apply transition-opacity duration-1000;
+  }
+  
+  @keyframes fadeAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .slide-fade-in {
+    animation: fadeAnimation 1s ease-in-out;
   }
 }
 
