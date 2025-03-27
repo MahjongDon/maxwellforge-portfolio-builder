@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -14,7 +13,8 @@ const projectSlides = [
     id: 2,
     title: "RevUp Sales Summit",
     image: "/lovable-uploads/Slideshow 2.PNG",
-    altText: "RevUp Sales Summit landing page with countdown timer on dark background"
+    altText: "RevUp Sales Summit landing page with countdown timer on dark background",
+    demoUrl: "https://forgesales.maxwellforge.dev/"
   },
   {
     id: 3,
@@ -38,7 +38,8 @@ const projectSlides = [
     id: 6,
     title: "ForgeNotes",
     image: "/lovable-uploads/Slideshow 6.PNG",
-    altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface"
+    altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface",
+    demoUrl: "https://forgenotes.maxwellforge.dev"
   },
   {
     id: 7,
@@ -134,6 +135,16 @@ const HeroSection = () => {
                 >
                   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
                     <h3 className="text-white text-2xl font-bold">{slide.title}</h3>
+                    {slide.demoUrl && (
+                      <a 
+                        href={slide.demoUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="mt-2 px-4 py-1 bg-white/20 hover:bg-white/40 text-white rounded-md transition-colors"
+                      >
+                        View Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

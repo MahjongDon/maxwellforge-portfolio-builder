@@ -8,49 +8,52 @@ interface Project {
   title: string;
   image: string;
   altText: string;
+  demoUrl?: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
     title: "Joe's Coffee",
-    image: "/lovable-uploads/Slideshow 1.PNG",
+    image: "/lovable-uploads/1.PNG",
     altText: "Joe's Coffee Shop landing page with coffee cups and latte art"
   },
   {
     id: 2,
     title: "RevUp Sales Summit",
-    image: "/lovable-uploads/Slideshow 2.PNG",
-    altText: "RevUp Sales Summit landing page with countdown timer on dark background"
+    image: "/lovable-uploads/2.PNG",
+    altText: "RevUp Sales Summit landing page with countdown timer on dark background",
+    demoUrl: "https://forgesales.maxwellforge.dev/"
   },
   {
     id: 3,
     title: "WanderFree Blog",
-    image: "/lovable-uploads/Slideshow 3.PNG",
+    image: "/lovable-uploads/3.PNG",
     altText: "WanderFree travel blog with palm trees background and budget travel tips"
   },
   {
     id: 4,
     title: "FinForge Budget Tracker",
-    image: "/lovable-uploads/Slideshow 4.PNG",
+    image: "/lovable-uploads/4.PNG",
     altText: "FinForge budget tracker showing financial dashboard with charts and budget overview"
   },
   {
     id: 5,
     title: "ForgeCRM",
-    image: "/lovable-uploads/Slideshow 5.PNG",
-    altText: "CRM App dashboard displaying contact management and sales pipeline metrics"
+    image: "/lovable-uploads/5.PNG",
+    altText: "ForgeCRM dashboard displaying contact management and sales pipeline metrics"
   },
   {
     id: 6,
     title: "ForgeNotes",
-    image: "/lovable-uploads/Slideshow 6.PNG",
-    altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface"
+    image: "/lovable-uploads/6.PNG",
+    altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface",
+    demoUrl: "https://forgenotes.maxwellforge.dev"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "/lovable-uploads/Slideshow 7.PNG",
+    image: "/lovable-uploads/7.PNG",
     altText: "ForgeGuard secure password generator with customizable options"
   }
 ];
@@ -113,6 +116,16 @@ const PortfolioSlideshow = () => {
                 >
                   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
                     <h3 className="text-white text-2xl font-bold">{project.title}</h3>
+                    {project.demoUrl && (
+                      <a 
+                        href={project.demoUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="mt-2 px-4 py-1 bg-white/20 hover:bg-white/40 text-white rounded-md transition-colors"
+                      >
+                        View Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
