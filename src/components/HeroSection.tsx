@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -55,6 +56,34 @@ const HeroSection = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadErrors, setLoadErrors] = useState<Record<number, boolean>>({});
+
+  // Preload images
+  useEffect(() => {
+    const loadImages = async () => {
+      console.log("Starting to preload hero slideshow images");
+      const promises = projectSlides.map((slide) => {
+        return new Promise<void>((resolve) => {
+          const img = new Image();
+          img.src = slide.image;
+          img.onload = () => {
+            console.log(`Successfully loaded: ${slide.image}`);
+            resolve();
+          };
+          img.onerror = () => {
+            console.error(`Failed to load image: ${slide.image}`);
+            setLoadErrors((prev) => ({ ...prev, [slide.id]: true }));
+            resolve();
+          };
+        });
+      });
+      await Promise.all(promises);
+      console.log("All hero slideshow images preloaded");
+      setImagesLoaded(true);
+    };
+    loadImages();
+  }, []);
 
   // Handle animations on component mount
   useEffect(() => {
@@ -118,68 +147,82 @@ const HeroSection = () => {
           ref={imageRef} 
           className="reveal w-full md:w-1/2 aspect-[4/3] md:aspect-square relative"
         >
-          {/* Simple Slideshow */}
+          {/* Slideshow with preloading */}
           <div className="slideshow-container w-full h-full relative overflow-hidden">
-            {projectSlides.map((slide, index) => (
-              <div 
-                key={slide.id}
-                className={`slide absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-                  index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              >
-                <div 
-                  className="w-full h-full bg-cover bg-center"
-                  style={{ backgroundImage: `url(${slide.image})` }}
-                  role="img"
-                  aria-label={slide.altText}
-                >
-                  <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
-                    <h3 className="text-white text-2xl font-bold">{slide.title}</h3>
-                    {slide.demoUrl && (
-                      <a 
-                        href={slide.demoUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="mt-2 px-4 py-1 bg-white/20 hover:bg-white/40 text-white rounded-md transition-colors"
+            {!imagesLoaded ? (
+              <div className="w-full h-full flex items-center justify-center bg-gray-800">
+                <p className="text-white">Loading slideshow...</p>
+              </div>
+            ) : (
+              <>
+                {projectSlides.map((slide, index) => (
+                  <div 
+                    key={slide.id}
+                    className={`slide absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+                      index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                    }`}
+                  >
+                    {loadErrors[slide.id] ? (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-800">
+                        <p className="text-red-500">Failed to load image</p>
+                      </div>
+                    ) : (
+                      <div 
+                        className="w-full h-full bg-cover bg-center"
+                        style={{ backgroundImage: `url(${slide.image})` }}
+                        role="img"
+                        aria-label={slide.altText}
                       >
-                        View Demo
-                      </a>
+                        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+                          <h3 className="text-white text-2xl font-bold">{slide.title}</h3>
+                          {slide.demoUrl && (
+                            <a 
+                              href={slide.demoUrl} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="mt-2 px-4 py-1 bg-white/20 hover:bg-white/40 text-white rounded-md transition-colors"
+                            >
+                              View Demo
+                            </a>
+                          )}
+                        </div>
+                      </div>
                     )}
                   </div>
+                ))}
+                
+                {/* Navigation buttons */}
+                <button 
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 p-2 rounded-full transition-colors"
+                  aria-label="Previous slide"
+                >
+                  <ArrowLeft className="h-6 w-6 text-white" />
+                </button>
+                
+                <button 
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 p-2 rounded-full transition-colors"
+                  aria-label="Next slide"
+                >
+                  <ArrowRight className="h-6 w-6 text-white" />
+                </button>
+                
+                {/* Slide indicators */}
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
+                  {projectSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        currentSlide === index ? "bg-white w-4" : "bg-white/50"
+                      }`}
+                      onClick={() => setCurrentSlide(index)}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
                 </div>
-              </div>
-            ))}
-            
-            {/* Navigation buttons */}
-            <button 
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 p-2 rounded-full transition-colors"
-              aria-label="Previous slide"
-            >
-              <ArrowLeft className="h-6 w-6 text-white" />
-            </button>
-            
-            <button 
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/30 p-2 rounded-full transition-colors"
-              aria-label="Next slide"
-            >
-              <ArrowRight className="h-6 w-6 text-white" />
-            </button>
-            
-            {/* Slide indicators */}
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
-              {projectSlides.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    currentSlide === index ? "bg-white w-4" : "bg-white/50"
-                  }`}
-                  onClick={() => setCurrentSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
+              </>
+            )}
           </div>
         </div>
       </div>
