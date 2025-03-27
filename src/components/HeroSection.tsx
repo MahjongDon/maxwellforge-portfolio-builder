@@ -34,9 +34,9 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div ref={videoRef} className="reveal w-full md:w-1/2 aspect-[4/3] md:aspect-square relative">
+        <div ref={videoRef} className="reveal w-full md:w-1/2 aspect-video md:aspect-square relative">
           <video
-            src="/Slideshow.mp4"
+            src="lovable-uploads/Slideshow.webm"
             autoPlay
             loop
             muted
