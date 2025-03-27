@@ -14,43 +14,43 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Joe's Coffee",
-    image: "/lovable-uploads/8c55be99-03c5-4023-b3ef-e8787fbb3676.png",
+    image: "/lovable-uploads/Slideshow 1.PNG",
     altText: "Joe's Coffee Shop landing page with coffee cups and latte art"
   },
   {
     id: 2,
     title: "RevUp Sales Summit",
-    image: "/lovable-uploads/1d6c0f29-d362-4ca7-b319-f55b62f13e91.png",
+    image: "/lovable-uploads/Slideshow 2.PNG",
     altText: "RevUp Sales Summit landing page with countdown timer on dark background"
   },
   {
     id: 3,
     title: "WanderFree Blog",
-    image: "/lovable-uploads/d33dee7e-20bc-41c1-ab8c-4291bd92b6d5.png",
+    image: "/lovable-uploads/Slideshow 3.PNG",
     altText: "WanderFree travel blog with palm trees background and budget travel tips"
   },
   {
     id: 4,
     title: "FinForge Budget Tracker",
-    image: "/lovable-uploads/78f11d83-c04a-4996-b9d6-16aabb4a60e6.png",
+    image: "/lovable-uploads/Slideshow 4.PNG",
     altText: "FinForge budget tracker showing financial dashboard with charts and budget overview"
   },
   {
     id: 5,
     title: "ForgeCRM",
-    image: "/lovable-uploads/bbb1cf95-220f-4e83-bcdc-ddb323d38e5c.png",
+    image: "/lovable-uploads/Slideshow 5.PNG",
     altText: "CRM App dashboard displaying contact management and sales pipeline metrics"
   },
   {
     id: 6,
     title: "ForgeNotes",
-    image: "/lovable-uploads/8079d914-daa2-4a23-bd97-5bbcb90a2a27.png",
+    image: "/lovable-uploads/Slideshow 6.PNG.png",
     altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "/lovable-uploads/c21fe084-3a36-441e-ba8a-58ca75ee3df6.png",
+    image: "/lovable-uploads/Slideshow 7.PNG.png",
     altText: "ForgeGuard secure password generator with customizable options"
   }
 ];
