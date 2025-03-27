@@ -34,15 +34,19 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div ref={videoRef} className="reveal w-full md:w-1/2 aspect-video md:aspect-square relative">
+        <div ref={videoRef} className="reveal w-full md:w-1/2 relative">
           <video
             src="lovable-uploads/Slideshow.webm"
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover rounded-lg shadow-lg"
+            className="w-full h-full rounded-lg shadow-lg object-cover"
             aria-label="Portfolio showcase video featuring Joe's Coffee, RevUp Sales Summit, WanderFree Blog, and more"
+            style={{
+              maxWidth: "1920px",
+              aspectRatio: "16 / 9",
+            }}
           >
             <p>Your browser does not support the video tag. Please view my portfolio on Fiverr.</p>
           </video>
