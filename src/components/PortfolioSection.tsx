@@ -24,7 +24,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "High-converting landing page with optimized CTAs and responsive design.",
     technologies: ["React", "TailwindCSS", "Framer Motion"],
     buildTime: "24 hours",
-    image: "/lovable-uploads/c2d29721-4d78-4623-884b-83b3197e7939.png",
+    image: "/lovable-uploads/72c3df66-68d4-4dd9-95c4-2de2ab22cbc2.png",
     altText: "Joe's Coffee Shop landing page screenshot showing a mobile-ready design for small businesses.",
     result: "35% increase in lead generation within first week.",
     demoUrl: "http://forgecoffee.maxwellforge.dev"
@@ -36,10 +36,10 @@ const portfolioItems: PortfolioItem[] = [
     description: "Event landing page with countdown timer, registration form, and speaker profiles.",
     technologies: ["React", "TailwindCSS", "Netlify"],
     buildTime: "30 hours",
-    image: "/lovable-uploads/6eb43fe4-15f2-4b26-a7bb-487406181bea.png",
+    image: "/lovable-uploads/c2810e08-4217-4d35-a22f-6cbcbde9e57f.png",
     altText: "RevUp Sales Summit landing page with registration countdown and event details.",
     result: "Sold out event within 48 hours of page launch.",
-    demoUrl: "https://app.netlify.com/sites/forgesales/overview"
+    demoUrl: "https://forgesales.maxwellforge.dev/"
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Minimalist blog platform with advanced content management and SEO optimization.",
     technologies: ["NextJS", "SCSS", "Sanity CMS"],
     buildTime: "36 hours",
-    image: "/lovable-uploads/de3dc082-7139-4e18-8c48-57a832a5a982.png",
+    image: "/lovable-uploads/0c32a824-bfee-42dc-ac37-c2d239bb5f57.png",
     altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
     result: "Improved page load speed by 45% and doubled organic traffic.",
     demoUrl: "http://forgewander.maxwellforge.dev"
@@ -60,7 +60,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Personal finance application for tracking expenses and managing budgets with visualization tools.",
     technologies: ["Vue.js", "Chart.js", "Firebase"],
     buildTime: "36 hours",
-    image: "/lovable-uploads/e9d4f135-b1c1-4cbc-bbdc-dac89abc403b.png",
+    image: "/lovable-uploads/c5d9cece-2c95-4290-b8b3-0746d2f86138.png",
     altText: "FinForge budget tracker screenshot with expense tracking and currency conversion features.",
     result: "Helped users reduce unnecessary spending by an average of 15%.",
     demoUrl: "http://finforge.maxwellforge.dev/"
@@ -72,8 +72,8 @@ const portfolioItems: PortfolioItem[] = [
     description: "Custom CRM solution with client management, pipeline tracking, and analytics dashboard.",
     technologies: ["React", "Firebase", "ChartJS"],
     buildTime: "48 hours",
-    image: "/lovable-uploads/11eaf366-fec0-4fd4-9c10-31d1cc1adacc.png",
-    altText: "CRM App screenshot displaying contact and task management for small businesses.",
+    image: "/lovable-uploads/17007306-bad6-4cbd-ae47-a407fb7bce32.png",
+    altText: "CRM App dashboard displaying contact and task management for small businesses.",
     result: "Streamlined sales process, reducing closing time by 22%.",
     demoUrl: "http://forgecrm.maxwellforge.dev/"
   },
@@ -84,10 +84,10 @@ const portfolioItems: PortfolioItem[] = [
     description: "Elegant note-taking application with markdown support and cloud syncing.",
     technologies: ["Vue.js", "TailwindCSS", "Supabase"],
     buildTime: "30 hours",
-    image: "/lovable-uploads/b56fd888-dc98-47f2-9758-83cd2a001713.png",
+    image: "/lovable-uploads/7e440536-338e-43b6-aa9a-26d59318805e.png",
     altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
-    demoUrl: "http://forgenotes.maxwellforge.dev/"
+    demoUrl: "https://forgenotes.maxwellforge.dev/"
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Secure password generator with customizable parameters and strength assessment.",
     technologies: ["JavaScript", "CSS", "HTML"],
     buildTime: "12 hours",
-    image: "/lovable-uploads/c09edfc5-46a8-4232-a6c4-69ba4c01ae63.png",
+    image: "/lovable-uploads/d57c03b5-0af1-43b5-a675-33c8935e5188.png",
     altText: "ForgePass screenshot of a secure password generator with customizable options.",
     result: "Featured in a security newsletter with over 10,000 downloads in the first month.",
     demoUrl: "http://forgeguard.maxwellforge.dev/"
