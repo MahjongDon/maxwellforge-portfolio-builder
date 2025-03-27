@@ -42,7 +42,10 @@ const HeroSection = () => {
             muted
             playsInline
             className="w-full h-full object-cover rounded-lg shadow-lg"
-          />
+            aria-label="Portfolio showcase video featuring Joe's Coffee, RevUp Sales Summit, WanderFree Blog, and more"
+          >
+            <p>Your browser does not support the video tag. Please view my portfolio on Fiverr.</p>
+          </video>
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
