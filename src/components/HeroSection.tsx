@@ -1,5 +1,6 @@
 
 import { useEffect, useRef } from "react";
+import PortfolioSlideshow from "./PortfolioSlideshow";
 
 const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -50,10 +51,7 @@ const HeroSection = () => {
           ref={imageRef} 
           className="reveal w-full md:w-1/2 aspect-[4/3] md:aspect-square"
         >
-          <div className="relative w-full h-full overflow-hidden">
-            <div className="absolute inset-4 md:inset-8 bg-secondary"></div>
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center transform scale-95"></div>
-          </div>
+          <PortfolioSlideshow />
         </div>
       </div>
       
