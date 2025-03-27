@@ -7,45 +7,45 @@ const projectSlides = [
   {
     id: 1,
     title: "Joe's Coffee",
-    image: "/lovable-uploads/Slideshow 1webp",
+    image: "/lovable-uploads/Slideshow 1.webp",
     altText: "Joe's Coffee Shop landing page with coffee cups and latte art"
   },
   {
     id: 2,
     title: "RevUp Sales Summit",
-    image: "/lovable-uploads/Slideshow 2webp",
+    image: "/lovable-uploads/Slideshow 2.webp",
     altText: "RevUp Sales Summit landing page with countdown timer on dark background",
     demoUrl: "https://forgesales.maxwellforge.dev/"
   },
   {
     id: 3,
     title: "WanderFree Blog",
-    image: "/lovable-uploads/Slideshow 3webp",
+    image: "/lovable-uploads/Slideshow 3.webp",
     altText: "WanderFree travel blog with palm trees background and budget travel tips"
   },
   {
     id: 4,
     title: "FinForge Budget Tracker",
-    image: "/lovable-uploads/Slideshow 4webp",
+    image: "/lovable-uploads/Slideshow 4.webp",
     altText: "FinForge budget tracker showing financial dashboard with charts and budget overview"
   },
   {
     id: 5,
     title: "ForgeCRM",
-    image: "/lovable-uploads/Slideshow 5webp",
+    image: "/lovable-uploads/Slideshow 5.webp",
     altText: "ForgeCRM dashboard displaying contact management and sales pipeline metrics"
   },
   {
     id: 6,
     title: "ForgeNotes",
-    image: "/lovable-uploads/Slideshow 6webp",
+    image: "/lovable-uploads/Slideshow 6.webp",
     altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface",
     demoUrl: "https://forgenotes.maxwellforge.dev"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "/lovable-uploads/Slideshow 7webp",
+    image: "/lovable-uploads/Slideshow 7.webp",
     altText: "ForgeGuard secure password generator with customizable options"
   }
 ];

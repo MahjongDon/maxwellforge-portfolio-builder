@@ -15,45 +15,45 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Joe's Coffee",
-    image: "/lovable-uploads/1.PNG",
+    image: "/lovable-uploads/1.webp",
     altText: "Joe's Coffee Shop landing page with coffee cups and latte art"
   },
   {
     id: 2,
     title: "RevUp Sales Summit",
-    image: "/lovable-uploads/2.PNG",
+    image: "/lovable-uploads/2.webp",
     altText: "RevUp Sales Summit landing page with countdown timer on dark background",
     demoUrl: "https://forgesales.maxwellforge.dev/"
   },
   {
     id: 3,
     title: "WanderFree Blog",
-    image: "/lovable-uploads/3.PNG",
+    image: "/lovable-uploads/3.webp",
     altText: "WanderFree travel blog with palm trees background and budget travel tips"
   },
   {
     id: 4,
     title: "FinForge Budget Tracker",
-    image: "/lovable-uploads/4.PNG",
+    image: "/lovable-uploads/4.webp",
     altText: "FinForge budget tracker showing financial dashboard with charts and budget overview"
   },
   {
     id: 5,
     title: "ForgeCRM",
-    image: "/lovable-uploads/5.PNG",
+    image: "/lovable-uploads/5.webp",
     altText: "ForgeCRM dashboard displaying contact management and sales pipeline metrics"
   },
   {
     id: 6,
     title: "ForgeNotes",
-    image: "/lovable-uploads/6.PNG",
+    image: "/lovable-uploads/6.webp",
     altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface",
     demoUrl: "https://forgenotes.maxwellforge.dev"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "/lovable-uploads/7.PNG",
+    image: "/lovable-uploads/7.webp",
     altText: "ForgeGuard secure password generator with customizable options"
   }
 ];
