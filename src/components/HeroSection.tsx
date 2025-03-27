@@ -7,44 +7,44 @@ const projectSlides = [
   {
     id: 1,
     title: "Joe's Coffee",
-    image: "/lovable-uploads/5aba59fb-18d8-4dc1-81c5-64ddff5b3084.png",
-    altText: "Joe's Coffee Shop landing page with coffee cups"
+    image: "/lovable-uploads/c2d29721-4d78-4623-884b-83b3197e7939.png",
+    altText: "Joe's Coffee Shop landing page with coffee cups and latte art"
   },
   {
     id: 2,
     title: "RevUp Sales Summit",
-    image: "/lovable-uploads/0482a93c-43ed-4b8c-9707-044ad5eb69e3.png",
-    altText: "RevUp Sales Summit landing page with countdown timer"
+    image: "/lovable-uploads/6eb43fe4-15f2-4b26-a7bb-487406181bea.png",
+    altText: "RevUp Sales Summit landing page with countdown timer on dark background"
   },
   {
     id: 3,
     title: "WanderFree Blog",
-    image: "/lovable-uploads/e8d85fdb-6656-42fd-b6fa-3ac3fff9acfd.png",
-    altText: "WanderFree travel blog with palm trees background"
+    image: "/lovable-uploads/de3dc082-7139-4e18-8c48-57a832a5a982.png",
+    altText: "WanderFree travel blog with palm trees background and budget travel tips"
   },
   {
     id: 4,
     title: "FinForge Budget Tracker",
-    image: "/lovable-uploads/1edb3df9-4321-4969-8c8d-46b7ff226110.png",
-    altText: "FinForge budget tracker showing financial dashboard with charts"
+    image: "/lovable-uploads/e9d4f135-b1c1-4cbc-bbdc-dac89abc403b.png",
+    altText: "FinForge budget tracker showing financial dashboard with charts and budget overview"
   },
   {
     id: 5,
     title: "ForgeCRM",
-    image: "/lovable-uploads/b5bfb219-96d4-4324-aa0d-e938814d3b76.png",
-    altText: "CRM App screenshot displaying contact and task management for small businesses"
+    image: "/lovable-uploads/11eaf366-fec0-4fd4-9c10-31d1cc1adacc.png",
+    altText: "ForgeCRM dashboard displaying contact management and sales pipeline metrics"
   },
   {
     id: 6,
     title: "ForgeNotes",
-    image: "/lovable-uploads/a7664875-1374-4362-af45-c40a9bca1f3c.png",
-    altText: "ForgeNotes note-taking app with interface"
+    image: "/lovable-uploads/b56fd888-dc98-47f2-9758-83cd2a001713.png",
+    altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "/lovable-uploads/c158ea81-3093-4da2-807f-769687d3d9a8.png",
-    altText: "ForgePass screenshot of a secure password generator with customizable options"
+    image: "/lovable-uploads/c09edfc5-46a8-4232-a6c4-69ba4c01ae63.png",
+    altText: "ForgeGuard secure password generator with customizable options"
   }
 ];
 
@@ -78,11 +78,11 @@ const HeroSection = () => {
     setCurrentSlide((prev) => (prev === 0 ? projectSlides.length - 1 : prev - 1));
   };
 
-  // Auto advance slideshow
+  // Auto advance slideshow - updated to 3 seconds (3000ms)
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 3000);
     
     return () => clearInterval(interval);
   }, []);
