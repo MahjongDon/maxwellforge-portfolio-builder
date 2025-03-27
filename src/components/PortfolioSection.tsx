@@ -24,7 +24,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "High-converting landing page with optimized CTAs and responsive design.",
     technologies: ["React", "TailwindCSS", "Framer Motion"],
     buildTime: "24 hours",
-    image: "/lovable-uploads/1webp",
+    image: "/lovable-uploads/1.webp",
     altText: "Joe's Coffee Shop landing page screenshot showing a mobile-ready design for small businesses.",
     result: "35% increase in lead generation within first week.",
     demoUrl: "http://forgecoffee.maxwellforge.dev"
@@ -36,7 +36,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Event landing page with countdown timer, registration form, and speaker profiles.",
     technologies: ["React", "TailwindCSS", "Netlify"],
     buildTime: "30 hours",
-    image: "/lovable-uploads/2webp",
+    image: "/lovable-uploads/2.webp",
     altText: "RevUp Sales Summit landing page with registration countdown and event details.",
     result: "Sold out event within 48 hours of page launch.",
     demoUrl: "https://forgesales.maxwellforge.dev/"
@@ -48,7 +48,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Minimalist blog platform with advanced content management and SEO optimization.",
     technologies: ["NextJS", "SCSS", "Sanity CMS"],
     buildTime: "36 hours",
-    image: "/lovable-uploads/3webp",
+    image: "/lovable-uploads/3.webp",
     altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
     result: "Improved page load speed by 45% and doubled organic traffic.",
     demoUrl: "http://forgewander.maxwellforge.dev"
@@ -60,7 +60,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Personal finance application for tracking expenses and managing budgets with visualization tools.",
     technologies: ["Vue.js", "Chart.js", "Firebase"],
     buildTime: "36 hours",
-    image: "/lovable-uploads/4webp",
+    image: "/lovable-uploads/4.webp",
     altText: "FinForge budget tracker screenshot with expense tracking and currency conversion features.",
     result: "Helped users reduce unnecessary spending by an average of 15%.",
     demoUrl: "http://finforge.maxwellforge.dev/"
@@ -72,7 +72,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Custom CRM solution with client management, pipeline tracking, and analytics dashboard.",
     technologies: ["React", "Firebase", "ChartJS"],
     buildTime: "48 hours",
-    image: "/lovable-uploads/5webp",
+    image: "/lovable-uploads/5.webp",
     altText: "CRM App dashboard displaying contact and task management for small businesses.",
     result: "Streamlined sales process, reducing closing time by 22%.",
     demoUrl: "http://forgecrm.maxwellforge.dev/"
@@ -84,7 +84,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Elegant note-taking application with markdown support and cloud syncing.",
     technologies: ["Vue.js", "TailwindCSS", "Supabase"],
     buildTime: "30 hours",
-    image: "/lovable-uploads/6webp",
+    image: "/lovable-uploads/6.webp",
     altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
     demoUrl: "https://forgenotes.maxwellforge.dev/"
@@ -96,7 +96,7 @@ const portfolioItems: PortfolioItem[] = [
     description: "Secure password generator with customizable parameters and strength assessment.",
     technologies: ["JavaScript", "CSS", "HTML"],
     buildTime: "12 hours",
-    image: "/lovable-uploads/7webp",
+    image: "/lovable-uploads/7.webp",
     altText: "ForgePass screenshot of a secure password generator with customizable options.",
     result: "Featured in a security newsletter with over 10,000 downloads in the first month.",
     demoUrl: "http://forgeguard.maxwellforge.dev/"
