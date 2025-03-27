@@ -44,13 +44,13 @@ const projects: Project[] = [
   {
     id: 6,
     title: "ForgeNotes",
-    image: "/lovable-uploads/Slideshow 6.PNG.png",
+    image: "/lovable-uploads/Slideshow 6.PNG",
     altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "/lovable-uploads/Slideshow 7.PNG.png",
+    image: "/lovable-uploads/Slideshow 7.PNG",
     altText: "ForgeGuard secure password generator with customizable options"
   }
 ];
