@@ -14,44 +14,44 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Joe's Coffee",
-    image: "public/lovable-uploads/044e5c53-3b47-4566-b468-a6e3d8dc9519.png",
+    image: "/lovable-uploads/c2d29721-4d78-4623-884b-83b3197e7939.png",
     altText: "Joe's Coffee Shop landing page with coffee cups"
   },
   {
     id: 2,
     title: "RevUp Sales Summit",
-    image: "public/lovable-uploads/d6548349-1199-41bf-97f0-ed6fa1ed8405.png",
+    image: "/lovable-uploads/6eb43fe4-15f2-4b26-a7bb-487406181bea.png",
     altText: "RevUp Sales Summit landing page with countdown timer"
   },
   {
     id: 3,
     title: "WanderFree Blog",
-    image: "public/lovable-uploads/0482a93c-43ed-4b8c-9707-044ad5eb69e3.png",
+    image: "/lovable-uploads/de3dc082-7139-4e18-8c48-57a832a5a982.png",
     altText: "WanderFree travel blog with palm trees background"
   },
   {
     id: 4,
     title: "FinForge Budget Tracker",
-    image: "public/lovable-uploads/1edb3df9-4321-4969-8c8d-46b7ff226110.png",
+    image: "/lovable-uploads/e9d4f135-b1c1-4cbc-bbdc-dac89abc403b.png",
     altText: "FinForge budget tracker showing financial dashboard with charts"
   },
   {
     id: 5,
     title: "ForgeCRM",
-    image: "public/lovable-uploads/b5bfb219-96d4-4324-aa0d-e938814d3b76.png",
-    altText: "CRM App screenshot displaying contact and task management for small businesses"
+    image: "/lovable-uploads/11eaf366-fec0-4fd4-9c10-31d1cc1adacc.png",
+    altText: "CRM App screenshot displaying contact management and sales pipeline metrics"
   },
   {
     id: 6,
     title: "ForgeNotes",
-    image: "public/lovable-uploads/5aba59fb-18d8-4dc1-81c5-64ddff5b3084.png",
-    altText: "ForgeNotes note-taking app with interface"
+    image: "/lovable-uploads/b56fd888-dc98-47f2-9758-83cd2a001713.png",
+    altText: "ForgeNotes note-taking app with markdown formatting and dark mode interface"
   },
   {
     id: 7,
     title: "ForgeGuard",
-    image: "public/lovable-uploads/c158ea81-3093-4da2-807f-769687d3d9a8.png",
-    altText: "ForgePass screenshot of a secure password generator with customizable options"
+    image: "/lovable-uploads/c09edfc5-46a8-4232-a6c4-69ba4c01ae63.png",
+    altText: "ForgeGuard secure password generator with customizable options"
   }
 ];
 
