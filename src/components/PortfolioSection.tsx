@@ -29,7 +29,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/1.PNG",
     altText: "Joe's Coffee Shop landing page screenshot showing a mobile-ready design for small businesses.",
     result: "35% increase in lead generation within first week.",
-    demoUrl: "http://forgecoffee.maxwellforge.dev",
+    demoUrl: "/projects/forgecoffee",
     slug: "coffee-landing"
   },
   {
@@ -42,7 +42,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/2.PNG",
     altText: "RevUp Sales Summit landing page with registration countdown and event details.",
     result: "Sold out event within 48 hours of page launch.",
-    demoUrl: "https://forgesales.maxwellforge.dev/",
+    demoUrl: "/projects/forgesales",
     slug: "sales-summit"
   },
   {
@@ -55,7 +55,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/3.PNG",
     altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
     result: "Improved page load speed by 45% and doubled organic traffic.",
-    demoUrl: "http://forgewander.maxwellforge.dev",
+    demoUrl: "/projects/forgewander",
     slug: "travel-blog"
   },
   {
@@ -68,7 +68,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/4.PNG",
     altText: "FinForge budget tracker screenshot with expense tracking and currency conversion features.",
     result: "Helped users reduce unnecessary spending by an average of 15%.",
-    demoUrl: "http://finforge.maxwellforge.dev/",
+    demoUrl: "/projects/finforge",
     slug: "budget-tracker"
   },
   {
@@ -81,7 +81,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/5.PNG",
     altText: "CRM App dashboard displaying contact and task management for small businesses.",
     result: "Streamlined sales process, reducing closing time by 22%.",
-    demoUrl: "http://forgecrm.maxwellforge.dev/",
+    demoUrl: "/projects/forgecrm",
     slug: "crm-app"
   },
   {
@@ -94,7 +94,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/6.PNG",
     altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
-    demoUrl: "https://forgenotes.maxwellforge.dev/",
+    demoUrl: "/projects/forgenotes",
     slug: "note-taking"
   }
 ];
