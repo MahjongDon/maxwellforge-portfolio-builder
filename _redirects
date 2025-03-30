@@ -1,0 +1,7 @@
+projects/forgepass/* forgeguard.netlify.app/:splat 301!
+projects/forgewander/* forgewander.netlify.app/:splat 301!
+projects/forgenotes/* forgenotes.netlify.app/:splat 301!
+projects/forgecoffee/* forgecoffee.netlify.app/:splat 301!
+projects/forgecrm/* forgecrm.netlify.app/:splat 301!
+projects/forgesales/* forgesales.netlify.app/:splat 301!
+projects/finforge/* finforge.netlify.app/:splat 301!
