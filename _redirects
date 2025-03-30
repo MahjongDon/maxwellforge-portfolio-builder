@@ -1,8 +1,8 @@
 
-/projects/forgepass/* forgeguard.maxwellforge.dev/:splat 200
-/projects/forgewander/* forgewander.maxwellforge.dev/:splat 200
-/projects/forgenotes/* forgenotes.maxwellforge.dev/:splat 200
-/projects/forgecoffee/* forgecoffee.maxwellforge.dev/:splat 200
-/projects/forgecrm/* forgecrm.maxwellforge.dev/:splat 200
-/projects/forgesales/* forgesales.maxwellforge.dev/:splat 200
-/projects/finforge/* finforge.maxwellforge.dev/:splat 200
+https://forgeguard.maxwellforge.dev/* https://forgeguard.maxwellforge.dev/:splat 300!
+https://forgewander.maxwellforge.dev/* https://forgewander.maxwellforge.dev/:splat 301!
+https://forgenotes.maxwellforge.dev/* https://forgenotes.maxwellforge.dev/:splat 301!
+https://forgecoffee.maxwellforge.dev/* https://forgecoffee.maxwellforge.dev/:splat 301!
+https://forgecrm.maxwellforge.dev/* https://forgecrm.maxwellforge.dev/:splat 301!
+https://forgesales.maxwellforge.dev/* https://forgesales.maxwellforge.dev/:splat 301!
+https://finforge.maxwellforge.dev/* https://finforge.maxwellforge.dev/:splat 301!
