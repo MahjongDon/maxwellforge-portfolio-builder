@@ -1,5 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface PortfolioItem {
@@ -14,6 +15,7 @@ interface PortfolioItem {
   result: string;
   demoUrl?: string;
   githubUrl?: string;
+  slug: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
@@ -24,10 +26,11 @@ const portfolioItems: PortfolioItem[] = [
     description: "High-converting landing page with optimized CTAs and responsive design.",
     technologies: ["React", "TailwindCSS", "Framer Motion"],
     buildTime: "24 hours",
-    image: "/lovable-uploads/1.webp",
+    image: "/lovable-uploads/1.PNG",
     altText: "Joe's Coffee Shop landing page screenshot showing a mobile-ready design for small businesses.",
     result: "35% increase in lead generation within first week.",
-    demoUrl: "http://forgecoffee.maxwellforge.dev"
+    demoUrl: "http://forgecoffee.maxwellforge.dev",
+    slug: "coffee-landing"
   },
   {
     id: 2,
@@ -36,10 +39,11 @@ const portfolioItems: PortfolioItem[] = [
     description: "Event landing page with countdown timer, registration form, and speaker profiles.",
     technologies: ["React", "TailwindCSS", "Netlify"],
     buildTime: "30 hours",
-    image: "/lovable-uploads/2.webp",
+    image: "/lovable-uploads/2.PNG",
     altText: "RevUp Sales Summit landing page with registration countdown and event details.",
     result: "Sold out event within 48 hours of page launch.",
-    demoUrl: "https://forgesales.maxwellforge.dev/"
+    demoUrl: "https://forgesales.maxwellforge.dev/",
+    slug: "sales-summit"
   },
   {
     id: 3,
@@ -48,10 +52,11 @@ const portfolioItems: PortfolioItem[] = [
     description: "Minimalist blog platform with advanced content management and SEO optimization.",
     technologies: ["NextJS", "SCSS", "Sanity CMS"],
     buildTime: "36 hours",
-    image: "/lovable-uploads/3.webp",
+    image: "/lovable-uploads/3.PNG",
     altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
     result: "Improved page load speed by 45% and doubled organic traffic.",
-    demoUrl: "http://forgewander.maxwellforge.dev"
+    demoUrl: "http://forgewander.maxwellforge.dev",
+    slug: "travel-blog"
   },
   {
     id: 4,
@@ -60,10 +65,11 @@ const portfolioItems: PortfolioItem[] = [
     description: "Personal finance application for tracking expenses and managing budgets with visualization tools.",
     technologies: ["Vue.js", "Chart.js", "Firebase"],
     buildTime: "36 hours",
-    image: "/lovable-uploads/4.webp",
+    image: "/lovable-uploads/4.PNG",
     altText: "FinForge budget tracker screenshot with expense tracking and currency conversion features.",
     result: "Helped users reduce unnecessary spending by an average of 15%.",
-    demoUrl: "http://finforge.maxwellforge.dev/"
+    demoUrl: "http://finforge.maxwellforge.dev/",
+    slug: "budget-tracker"
   },
   {
     id: 5,
@@ -72,10 +78,11 @@ const portfolioItems: PortfolioItem[] = [
     description: "Custom CRM solution with client management, pipeline tracking, and analytics dashboard.",
     technologies: ["React", "Firebase", "ChartJS"],
     buildTime: "48 hours",
-    image: "/lovable-uploads/5.webp",
+    image: "/lovable-uploads/5.PNG",
     altText: "CRM App dashboard displaying contact and task management for small businesses.",
     result: "Streamlined sales process, reducing closing time by 22%.",
-    demoUrl: "http://forgecrm.maxwellforge.dev/"
+    demoUrl: "http://forgecrm.maxwellforge.dev/",
+    slug: "crm-app"
   },
   {
     id: 6,
@@ -84,22 +91,11 @@ const portfolioItems: PortfolioItem[] = [
     description: "Elegant note-taking application with markdown support and cloud syncing.",
     technologies: ["Vue.js", "TailwindCSS", "Supabase"],
     buildTime: "30 hours",
-    image: "/lovable-uploads/6.webp",
+    image: "/lovable-uploads/6.PNG",
     altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
-    demoUrl: "https://forgenotes.maxwellforge.dev/"
-  },
-  {
-    id: 7,
-    title: "Password Generator",
-    category: "ForgeGuard",
-    description: "Secure password generator with customizable parameters and strength assessment.",
-    technologies: ["JavaScript", "CSS", "HTML"],
-    buildTime: "12 hours",
-    image: "/lovable-uploads/7.webp",
-    altText: "ForgePass screenshot of a secure password generator with customizable options.",
-    result: "Featured in a security newsletter with over 10,000 downloads in the first month.",
-    demoUrl: "http://forgeguard.maxwellforge.dev/"
+    demoUrl: "https://forgenotes.maxwellforge.dev/",
+    slug: "note-taking"
   }
 ];
 
@@ -193,6 +189,16 @@ const PortfolioSection = () => {
                       </a>
                     )}
                     
+                    <a
+                      href={`/portfolio/${item.slug}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                      }}
+                      className="px-3 py-1.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-sm rounded-sm transition-colors"
+                    >
+                      View Page
+                    </a>
+                    
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -200,7 +206,7 @@ const PortfolioSection = () => {
                       }}
                       className="px-3 py-1.5 bg-white text-black text-sm rounded-sm hover:bg-white/90 transition-colors"
                     >
-                      View Details
+                      Details
                     </button>
                   </div>
                 </div>
@@ -293,6 +299,13 @@ const PortfolioSection = () => {
                     View Live Demo
                   </a>
                 )}
+                
+                <a 
+                  href={`/portfolio/${selectedItem.slug}`}
+                  className="px-6 py-2 border border-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  View Project Page
+                </a>
                 
                 {selectedItem.githubUrl && (
                   <a 

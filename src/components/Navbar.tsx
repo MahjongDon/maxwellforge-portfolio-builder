@@ -1,15 +1,19 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const sections = [
     { id: "home", label: "Home" },
+    { id: "services", label: "Services" },
     { id: "portfolio", label: "Portfolio" },
     { id: "skills", label: "Skills" },
+    { id: "blog", label: "Blog" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -41,6 +45,7 @@ const Navbar = () => {
   }, [sections]);
 
   const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
@@ -59,7 +64,7 @@ const Navbar = () => {
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between px-4">
         <a href="#home" className="text-xl font-bold text-primary hover:text-black transition-colors">
           MaxwellForge
         </a>
@@ -79,30 +84,52 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <button 
+        <a 
+          href="#contact"
           className="hidden md:inline-block bg-primary hover:bg-black text-white px-4 py-2 transition-colors duration-300"
         >
           Hire Me
-        </button>
+        </a>
 
-        <button className="md:hidden text-primary focus:outline-none">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+        <button 
+          className="md:hidden text-primary focus:outline-none"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
         </button>
       </div>
+
+      {/* Mobile menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-white shadow-md animate-fade-in">
+          <nav className="container mx-auto px-4 py-4 flex flex-col">
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                onClick={() => scrollToSection(section.id)}
+                className={cn(
+                  "py-3 text-left border-b border-border last:border-0",
+                  activeSection === section.id ? "text-black font-medium" : "text-primary/70"
+                )}
+              >
+                {section.label}
+              </button>
+            ))}
+            <a 
+              href="#contact"
+              className="mt-4 bg-primary text-white py-3 text-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Hire Me
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
