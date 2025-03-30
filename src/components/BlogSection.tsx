@@ -11,7 +11,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "May 15, 2023",
     category: "Web Development",
-    image: "/lovable-uploads/3.PNG",
+    image: "/lovable-uploads/3.webp",
     slug: "how-to-choose-right-tech-stack"
   },
   {
@@ -21,7 +21,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "June 22, 2023",
     category: "Design",
-    image: "/lovable-uploads/2.PNG",
+    image: "/lovable-uploads/2.webp",
     slug: "web-design-trends-2023"
   },
   {
@@ -31,7 +31,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "July 8, 2023",
     category: "Performance",
-    image: "/lovable-uploads/1.PNG",
+    image: "/lovable-uploads/1.webp",
     slug: "website-performance-optimization-guide"
   }
 ];

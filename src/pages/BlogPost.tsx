@@ -13,7 +13,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "May 15, 2023",
     category: "Web Development",
-    image: "/lovable-uploads/3.PNG",
+    image: "/lovable-uploads/3.webp",
     slug: "how-to-choose-right-tech-stack",
     content: "The technology stack you choose for your project can significantly impact its success, scalability, and maintenance costs. This comprehensive guide walks through the key considerations when selecting a tech stack, from business requirements and team expertise to scalability needs and budget constraints. We'll explore popular technology combinations for different types of applications and provide a framework for making informed decisions."
   },
@@ -24,7 +24,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "June 22, 2023",
     category: "Design",
-    image: "/lovable-uploads/2.PNG",
+    image: "/lovable-uploads/2.webp",
     slug: "web-design-trends-2023",
     content: "Web design continues to evolve rapidly with new technologies and changing user expectations. This article examines the five most influential design trends of 2023, including minimalist interfaces, micro-interactions, 3D elements, dark mode implementations, and accessibility-first design. For each trend, we provide practical examples and implementation tips to help you incorporate these elements into your own projects."
   },
@@ -35,7 +35,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "July 8, 2023",
     category: "Performance",
-    image: "/lovable-uploads/1.PNG",
+    image: "/lovable-uploads/1.webp",
     slug: "website-performance-optimization-guide",
     content: "Website performance directly impacts user experience, SEO rankings, and conversion rates. This comprehensive guide covers essential optimization techniques, from image compression and code minification to caching strategies and CDN implementation. You'll learn how to identify performance bottlenecks using tools like Lighthouse and WebPageTest, and how to implement both quick wins and long-term optimization strategies."
   },
@@ -46,7 +46,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "August 17, 2023",
     category: "Technology",
-    image: "/lovable-uploads/6.PNG",
+    image: "/lovable-uploads/6.webp",
     slug: "business-case-progressive-web-apps",
     content: "Progressive Web Apps (PWAs) represent a significant shift in how businesses approach mobile strategy. This article examines the business benefits of PWAs, including improved user engagement, higher conversion rates, and reduced development costs compared to native apps. We'll look at real-world success stories from companies that have implemented PWAs and provide a framework for evaluating whether a PWA is right for your business."
   },
@@ -57,7 +57,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "September 5, 2023",
     category: "Business",
-    image: "/lovable-uploads/5.PNG",
+    image: "/lovable-uploads/5.webp",
     slug: "essential-business-website-features",
     content: "A successful business website balances aesthetic appeal with practical functionality. This article outlines ten must-have features that every business website should include, from clear navigation and compelling calls-to-action to contact information and social proof. For each feature, we provide implementation best practices and examples of businesses doing it right."
   },
@@ -68,7 +68,7 @@ const blogPosts = [
     author: "Maxwell Forge",
     date: "October 23, 2023",
     category: "Accessibility",
-    image: "/lovable-uploads/4.PNG",
+    image: "/lovable-uploads/4.webp",
     slug: "web-accessibility-introduction",
     content: "Web accessibility ensures that people with disabilities can perceive, understand, navigate, and interact with websites. This introductory guide explains the importance of accessibility from both ethical and business perspectives, introduces the Web Content Accessibility Guidelines (WCAG), and provides practical tips for implementing accessibility in your web projects, from semantic HTML and keyboard navigation to color contrast and screen reader compatibility."
   }
