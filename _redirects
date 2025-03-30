@@ -1,8 +1,8 @@
 
-https://forgeguard.netlify.app/* https://forgeguard.maxwellforge.dev/:splat 300!
-https://forgewander.maxwellforge.dev/* https://forgewander.maxwellforge.dev/:splat 301!
-https://forgenotes.maxwellforge.dev/* https://forgenotes.maxwellforge.dev/:splat 301!
-https://forgecoffee.maxwellforge.dev/* https://forgecoffee.maxwellforge.dev/:splat 301!
-https://forgecrm.maxwellforge.dev/* https://forgecrm.maxwellforge.dev/:splat 301!
-https://forgesales.maxwellforge.dev/* https://forgesales.maxwellforge.dev/:splat 301!
-https://finforge.maxwellforge.dev/* https://finforge.maxwellforge.dev/:splat 301!
+https://forgeguard.netlify.app/* https://forgeguard.maxwellforge.dev/forgeguard:splat 301!
+https://forgewander.maxwellforge.dev/* https://forgewander.maxwellforge.dev/forgewander:splat 200
+https://forgenotes.maxwellforge.dev/* https://forgenotes.maxwellforge.dev/forgenotes:splat 301!
+https://forgecoffee.maxwellforge.dev/* https://forgecoffee.maxwellforge.dev/forgecoffee:splat 301!
+https://forgecrm.maxwellforge.dev/* https://forgecrm.maxwellforge.dev/forgecrm:splat 301!
+https://forgesales.maxwellforge.dev/* https://forgesales.maxwellforge.dev/forgesales:splat 301!
+https://finforge.maxwellforge.dev/* https://finforge.maxwellforge.dev/finforge:splat 301!
