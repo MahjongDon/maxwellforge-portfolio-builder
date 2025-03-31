@@ -13,34 +13,33 @@ const projects = [
 ];
 
 export default defineConfig(({ command, mode }) => {
-  // Determine the current project based on an environment variable or other mechanism
   const currentProject = process.env.PROJECT || 'fin-forge';
 
   if (!projects.includes(currentProject)) {
     throw new Error(`Unknown project: ${currentProject}`);
   }
 
+  const entryPoint = currentProject === 'forge-notes' ? 'static.html' : 'index.html';
+
   return {
-    root: path.resolve(__dirname, `dist/${currentProject}`), // Changed from projects/ to dist/
+    root: path.resolve(__dirname, `dist/${currentProject}`),
     server: {
       host: '::',
       port: 8080,
     },
     plugins: [
       react(),
-      viteStaticCopy({
-        targets: [
-          { src: path.resolve(__dirname, `dist/${currentProject}/_redirects`), dest: '' }, // Changed from projects/ to dist/
-        ],
-      }),
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, `dist/${currentProject}/src`), // Changed from projects/ to dist/
+        '@': path.resolve(__dirname, `dist/${currentProject}/src`),
       },
     },
     build: {
       outDir: path.resolve(__dirname, `dist/${currentProject}`),
+      rollupOptions: {
+        input: path.resolve(__dirname, `dist/${currentProject}`, entryPoint),
+      },
     },
   };
 });
