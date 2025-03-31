@@ -15,7 +15,7 @@ const projects = [
 ];
 
 // Generate Vite configs for each project
-const projectConfigs = projects.map(project => defineConfig(({ mode }) => ({
+const projectConfigs = projects.map(project => ({
   root: path.resolve(__dirname, `dist/${project}`),
   server: {
     host: "::",
@@ -23,13 +23,13 @@ const projectConfigs = projects.map(project => defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
+    componentTagger(),
     viteStaticCopy({
       targets: [
         { src: `public/_redirects`, dest: '' },
       ],
     }),
-  ].filter(Boolean),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, `dist/${project}/src`),
@@ -38,6 +38,11 @@ const projectConfigs = projects.map(project => defineConfig(({ mode }) => ({
   build: {
     outDir: path.resolve(__dirname, `dist/${project}/dist`),
   },
+}));
+
+export default defineConfig(({ mode }) => projectConfigs.map(config => ({
+  ...config,
+  plugins: config.plugins.filter(Boolean),
 })));
 
 export default projectConfigs;
