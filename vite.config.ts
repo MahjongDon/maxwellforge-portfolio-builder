@@ -26,7 +26,7 @@ const projectConfigs = projects.map(project => ({
     componentTagger(),
     viteStaticCopy({
       targets: [
-        { src: `public/_redirects`, dest: '' },
+        { src: `_redirects`, dest: '' },
       ],
     }),
   ],
