@@ -1,0 +1,107 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .wf-btn {
+    @apply bg-wanderfree-blue text-white py-3 px-6 rounded-md inline-block 
+           font-medium tracking-wide transition-all duration-300
+           hover:bg-wanderfree-dark hover:shadow-md active:translate-y-0.5;
+  }
+  
+  .wf-link {
+    @apply text-wanderfree-blue hover:text-wanderfree-dark transition-colors duration-200
+           relative after:content-[''] after:absolute after:w-full after:scale-x-0 
+           after:h-0.5 after:bottom-0 after:left-0 after:bg-wanderfree-blue after:origin-bottom-right 
+           after:transition-transform after:duration-300 hover:after:scale-x-100 
+           hover:after:origin-bottom-left;
+  }
+  
+  .wf-container {
+    @apply w-full max-w-content mx-auto px-6 md:px-8;
+  }
+  
+  .wf-card {
+    @apply bg-white rounded-xl shadow-sm transition-all duration-300
+           hover:shadow-md hover:-translate-y-1;
+  }
+  
+  .animate-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 0.5s ease-out forwards;
+  }
+  
+  .animate-reveal-delay-1 {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-reveal-delay-2 {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-reveal-delay-3 {
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

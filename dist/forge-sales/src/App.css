@@ -1,0 +1,55 @@
+
+/* Clearing default styles */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Ensure the app takes up full width */
+.app-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161616;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ea384c;
+  border-radius: 3px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ea384c #161616;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Override any conflicting styles */
+.logo {
+  height: auto;
+  padding: 0;
+}
+
+.card {
+  padding: 0;
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(234, 56, 76, 0.3);
+  color: white;
+}
