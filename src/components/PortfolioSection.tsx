@@ -29,7 +29,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/1.webp",
     altText: "Joe's Coffee Shop landing page screenshot showing a mobile-ready design for small businesses.",
     result: "35% increase in lead generation within first week.",
-    demoUrl: "/projects/forgecoffee",
+    demoUrl: "/forge-coffee",
     slug: "coffee-landing"
   },
   {
@@ -42,7 +42,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/2.webp",
     altText: "RevUp Sales Summit landing page with registration countdown and event details.",
     result: "Sold out event within 48 hours of page launch.",
-    demoUrl: "/projects/forgesales",
+    demoUrl: "/forge-sales",
     slug: "sales-summit"
   },
   {
@@ -55,7 +55,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/3.webp",
     altText: "WanderFree travel blog screenshot with budget travel tips and clean design.",
     result: "Improved page load speed by 45% and doubled organic traffic.",
-    demoUrl: "/projects/forgewander",
+    demoUrl: "/forge-wander",
     slug: "travel-blog"
   },
   {
@@ -68,7 +68,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/4.webp",
     altText: "FinForge budget tracker screenshot with expense tracking and currency conversion features.",
     result: "Helped users reduce unnecessary spending by an average of 15%.",
-    demoUrl: "/projects/finforge",
+    demoUrl: "/fin-forge",
     slug: "budget-tracker"
   },
   {
@@ -81,7 +81,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/5.webp",
     altText: "CRM App dashboard displaying contact and task management for small businesses.",
     result: "Streamlined sales process, reducing closing time by 22%.",
-    demoUrl: "/projects/forgecrm",
+    demoUrl: "/forge-crm",
     slug: "crm-app"
   },
   {
@@ -94,7 +94,7 @@ const portfolioItems: PortfolioItem[] = [
     image: "/lovable-uploads/6.webp",
     altText: "ForgeNotes screenshot showing a note-taking app with Markdown and dark mode.",
     result: "Positive user feedback with 90% satisfaction rating from beta testers.",
-    demoUrl: "/projects/forgenotes",
+    demoUrl: "/forge-notes",
     slug: "note-taking"
   }
 ];
