@@ -22,7 +22,7 @@ export default defineConfig(({ command, mode }) => {
   }
 
   return {
-    root: path.resolve(__dirname, `projects/${currentProject}`), // Adjust the path as necessary
+    root: path.resolve(__dirname, `dist/${currentProject}`), // Changed from projects/ to dist/
     server: {
       host: '::',
       port: 8080,
@@ -31,13 +31,13 @@ export default defineConfig(({ command, mode }) => {
       react(),
       viteStaticCopy({
         targets: [
-          { src: path.resolve(__dirname, `projects/${currentProject}/_redirects`), dest: '' },
+          { src: path.resolve(__dirname, `dist/${currentProject}/_redirects`), dest: '' }, // Changed from projects/ to dist/
         ],
       }),
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, `projects/${currentProject}/src`),
+        '@': path.resolve(__dirname, `dist/${currentProject}/src`), // Changed from projects/ to dist/
       },
     },
     build: {
